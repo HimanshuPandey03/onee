@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloom Algo - Algo Trading for Everyone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="{{ url_for('index') }}" class="logo">
+            <span class="logo-icon">🌸</span> Bloom Algo
+          </a>
+          <ul class="nav-menu">
+            <li>
+              <a
+                href="{{ url_for('index') }}"
+                class="{{ 'active' if request.endpoint == 'index' else '' }}"
+                >Home</a
+              >
+            </li>
+            <li><a href="{{ url_for('features') }}">Features</a></li>
+            <li>
+              <a
+                href="{{ url_for('pricing') }}"
+                class="{{ 'active' if request.endpoint == 'pricing' else '' }}"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ url_for('about') }}"
+                class="{{ 'active' if request.endpoint == 'about' else '' }}"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="{{ url_for('contact') }}"
+                class="{{ 'active' if request.endpoint == 'contact' else '' }}"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <div class="nav-actions">
+            <a href="{{ url_for('login') }}" class="btn btn-secondary">Login</a>
+            <a href="{{ url_for('register') }}" class="btn btn-primary">Create Account</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>{% block content %}{% endblock %}</main>
+  </body>
+</html>

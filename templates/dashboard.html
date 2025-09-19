@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bloom Algo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="#" class="logo">
+                    <span class="logo-icon">🌸</span> Bloom Algo
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <input type="text" class="search-bar" placeholder="🔍 Search">
+                <ul>
+                    <li><a href="#" class="active">📊 Dashboard</a></li>
+                    <li><a href="#">💡 Algo Base</a></li>
+                    <li><a href="#">🧺 Equity Baskets</a></li>
+                    <li><a href="#">📦 Orders</a></li>
+                    <li><a href="#">📑 Future Instances</a></li>
+                    <li><a href="#">💳 Subscription</a></li>
+                    <li><a href="#">⚙️ Settings</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="promo-card">
+                    <p><strong>Connect your broker account</strong></p>
+                    <span>Powered by Momentum algo</span>
+                </div>
+                <div class="user-profile">
+                    <span>👤 Akash Mehra</span>
+                    <a href="#">⁝</a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-value">17,04,736</span>
+                    <span class="stat-label">Account PL</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">8</span>
+                    <span class="stat-label">Algos deployed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value profit">+37,056</span>
+                    <span class="stat-label">Current MTM</span>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="section-header">
+                    <h2>Deployed Algos <span class="count-badge">5</span></h2>
+                </div>
+                <div class="card-grid">
+                    <div class="algo-card">
+                        <div class="card-header">
+                            <h3>Momentum Tracker</h3>
+                            <button class="btn-modify">Modify</button>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag tag-blue">Intraday</span>
+                            <span class="tag tag-gray">ATM</span>
+                            <span class="tag tag-gray">Nifty50</span>
+                        </div>
+                        <div class="card-stats">
+                            <div class="stat-box profit">+43,932 <small>+34.57%</small></div>
+                            <div class="stat-box"><strong>5</strong> Ongoing orders</div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-card-secondary">Exit Algo</button>
+                            <span class="status status-active">active</span>
+                        </div>
+                    </div>
+                    <div class="algo-card">
+                         <div class="card-header">
+                            <h3>Turbo Expiry</h3>
+                            <button class="btn-modify">Modify</button>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag tag-blue">Intraday</span>
+                            <span class="tag tag-gray">ATM</span>
+                            <span class="tag tag-gray">Nifty50</span>
+                        </div>
+                        <div class="card-stats">
+                            <div class="stat-box profit">+71,928 <small>+82.63%</small></div>
+                            <div class="stat-box"><strong>04</strong> orders completed</div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-card-secondary">Display Algo</button>
+                            <span class="status status-completed">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <section class="content-section">
+                <div class="section-header">
+                    <h2>Suggested Algos</h2>
+                </div>
+                <div class="card-grid">
+                    <div class="algo-card">
+                        <div class="card-header">
+                            <h3>Breakout Detector</h3>
+                            <span class="accuracy-badge">98%</span>
+                        </div>
+                        <div class="card-tags">
+                            <span class="tag tag-blue">Intraday</span>
+                            <span class="tag tag-gray">ATM</span>
+                            <span class="tag tag-gray">Nifty50</span>
+                        </div>
+                         <div class="card-info">
+                            <div><strong>₹38,000</strong> <small>x1 Lot</small></div>
+                            <small>Expiry day strategy</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
